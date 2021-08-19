@@ -29,3 +29,4 @@ class HPEHomePage(object):
         print("All results: "+str([x.text for x in results]))
         print("Num of results: "+str(len(results)))
         print("If all starts with \""+search_phrase+"\" :" + str(all([x.text.lower().startswith(search_phrase) for x in results])))
+        return len(results), all([x.text.lower().startswith(search_phrase) for x in results])
